@@ -1,0 +1,11 @@
+g++ card.o deck.o hand.o player.o dealer.o game.o card.o -o blackjack
+card.o: In function `card::set_card(int, std::string)':
+card.cpp:(.text+0x0): multiple definition of `card::set_card(int, std::string)'
+card.o:card.cpp:(.text+0x0): first defined here
+card.o: In function `card::printcard()':
+card.cpp:(.text+0x36): multiple definition of `card::printcard()'
+card.o:card.cpp:(.text+0x36): first defined here
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [blackjack] Error 1
